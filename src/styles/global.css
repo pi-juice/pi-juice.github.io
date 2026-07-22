@@ -1,0 +1,237 @@
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  /* Light theme (default) */
+  --bg: #ffffff;
+  --bg-subtle: #f6f7f9;
+  --text: #1a1a1a;
+  --text-muted: #5c6672;
+  --border: #e4e7eb;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --tag-bg: #eef2ff;
+  --tag-text: #3730a3;
+
+  --maxw: 52rem;
+  --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --bg-subtle: #171a21;
+    --text: #e8eaed;
+    --text-muted: #9aa4b2;
+    --border: #262b36;
+    --accent: #6ea8fe;
+    --accent-hover: #93c0ff;
+    --tag-bg: #1e2436;
+    --tag-text: #adc2ff;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+}
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--bg-subtle);
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+}
+pre {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Site chrome */
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.site-header .brand {
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+.site-nav a {
+  color: var(--text-muted);
+}
+.site-nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+main {
+  padding-block: 2.5rem 4rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.site-footer .container {
+  padding-block: 2rem;
+}
+
+/* Hero */
+.hero {
+  padding-block: 1.5rem 1rem;
+}
+.hero p.lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 40ch;
+}
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+/* Project grid + cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  background: var(--bg-subtle);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.project-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+.project-card h3 a {
+  color: var(--text);
+}
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--tag-text);
+  background: var(--tag-bg);
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+/* Project detail */
+.post-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.post-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects'))
+  .filter((p) => !p.data.draft && p.data.featured)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Your Name — Personal Site">
+  <section class="hero">
+    <h1>Hi, I'm Your Name.</h1>
+    <p class="lead">
+      A short line about who you are and what you build. Edit this in
+      <code>src/pages/index.astro</code>.
+    </p>
+    <div class="hero-links">
+      <a href="mailto:you@example.com">Email</a>
+      <a href="https://github.com/pi-juice">GitHub</a>
+      <a href="/projects/">All projects &rarr;</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured projects</h2>
+    <div class="project-grid">
+      {
+        projects.map((p) => (
+          <ProjectCard
+            href={`/projects/${p.id}/`}
+            title={p.data.title}
+            description={p.data.description}
+            tags={p.data.tags}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
