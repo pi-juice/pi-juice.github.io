@@ -9,7 +9,7 @@ interface Props {
 const { title, description = 'Personal website and project showcase.' } = Astro.props;
 
 // Site name shown in the header/footer. Change this to your name.
-const siteName = 'Pi-Juice';
+const siteName = 'Pi-juice';
 
 // Build a canonical URL only when `site` is configured in astro.config.mjs.
 const canonical = Astro.site
@@ -43,6 +43,7 @@ const year = new Date().getFullYear();
         <a class="brand" href="/">{siteName}</a>
         <nav class="site-nav">
           <a href="/projects/">Archive</a>
+          <a href="/resources/">Resources</a>
         </nav>
       </div>
     </header>
@@ -55,7 +56,7 @@ const year = new Date().getFullYear();
 
     <footer class="site-footer">
       <div class="container">
-        &copy; {year} {siteName}. Built with <a href="https://astro.build">Astro</a>.
+        &copy &reg &trade; Patent-pending; Built with love and LLMs - Limited Liability Machines.
       </div>
     </footer>
   </body>

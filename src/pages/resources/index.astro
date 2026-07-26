@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Section order and headings. Resources are grouped by `type` in this order;
+// any type with no entries is skipped.
+const SECTIONS = [
+  { type: 'video', label: 'Videos & channels' },
+  { type: 'paper', label: 'Papers' },
+  { type: 'article', label: 'Articles & blogs' },
+  { type: 'forum', label: 'Forums & threads' },
+  { type: 'tool', label: 'Tools' },
+  { type: 'other', label: 'Everything else' },
+] as const;
+
+const resources = await getCollection('resources');
+
+// Strip protocol/`www.` to show a compact source label, e.g. "arxiv.org".
+function sourceLabel(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+}
+
+// Group by type, newest-first within each group (entries without `added` last).
+const grouped = SECTIONS.map((section) => ({
+  ...section,
+  items: resources
+    .filter((r) => r.data.type === section.type)
+    .sort((a, b) => (b.data.added?.valueOf() ?? 0) - (a.data.added?.valueOf() ?? 0)),
+})).filter((section) => section.items.length > 0);
+---
+
+<BaseLayout
+  title="Resource-juice"
+  description="A running collection of links worth keeping: videos, papers, threads, and tools."
+>
+  <h1>Resources</h1>
+  <p class="lead">
+    A collection of links worth keeping.
+  </p>
+
+  {
+    grouped.map((section) => (
+      <section class="resource-section">
+        <h2>{section.label}</h2>
+        <ul class="resource-list">
+          {section.items.map((r) => (
+            <li class="resource">
+              <div class="resource-head">
+                <a
+                  class="resource-title"
+                  href={r.data.url}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {r.data.title}
+                </a>
+                <span class="resource-source">{sourceLabel(r.data.url)}</span>
+              </div>
+              <p class="resource-note">{r.data.note}</p>
+              {r.data.tags.length > 0 && (
+                <ul class="tags">
+                  {r.data.tags.map((tag) => (
+                    <li class="tag">{tag}</li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</BaseLayout>

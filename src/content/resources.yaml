@@ -1,0 +1,136 @@
+# Curated online resources, rendered at /resources/.
+# Add an entry by copying a block below. Required: id, title, url, type, note.
+#   type: one of video | paper | article | forum | tool | other
+#   tags: optional list of topic labels shown as pills
+#   added: optional YYYY-MM-DD; sorts entries newest-first within a section
+# The `id` just needs to be unique — a short slug is fine.
+
+- id: 3blue1brown
+  title: 3Blue1Brown
+  url: https://www.youtube.com/@3blue1brown
+  type: video
+  note: >-
+    Grant Sanderson's visual, intuition-first take on linear algebra, calculus,
+    and neural networks. The animations do the explaining.
+  tags: [math, visualization]
+  added: 2026-07-24
+
+- id: attention-is-all-you-need
+  title: "Attention Is All You Need"
+  url: https://arxiv.org/abs/1706.03762
+  type: paper
+  note: >-
+    The 2017 paper that introduced the Transformer and kicked off the modern
+    era of large language models. Worth reading the original.
+  tags: [ml, transformers]
+  added: 2026-07-20
+
+- id: what-every-programmer-should-know-about-memory
+  title: "What Every Programmer Should Know About Memory"
+  url: https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+  type: article
+  note: >-
+    Ulrich Drepper's long-form walk through caches, TLBs, and memory access
+    patterns. Dense, but it reshapes how you think about performance.
+  tags: [systems, performance]
+
+- id: hn-ask-favorite-cs-papers
+  title: "Ask HN: What are your favorite CS papers?"
+  url: https://news.ycombinator.com/item?id=12147703
+  type: forum
+  note: >-
+    A long Hacker News thread that doubles as a crowd-sourced reading list of
+    influential computer science papers.
+  tags: [reading-list]
+
+- id: excalidraw
+  title: Excalidraw
+  url: https://excalidraw.com
+  type: tool
+  note: >-
+    Hand-drawn-style virtual whiteboard for sketching diagrams and architecture.
+    No account needed; export straight to SVG or PNG.
+  tags: [diagrams]
+
+- id: computerphile
+  title: Computerphile
+  url: https://www.youtube.com/@Computerphile
+  type: video
+  note: >-
+    Short interviews with researchers on computer science topics — compression,
+    cryptography, algorithms — pitched for a curious general audience.
+  tags: [cs]
+  added: 2026-07-18
+
+- id: dynamo-paper
+  title: "Dynamo: Amazon's Highly Available Key-value Store"
+  url: https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf
+  type: paper
+  note: >-
+    The SOSP 2007 paper behind eventual consistency, consistent hashing, and
+    hinted handoff. Foundational reading for distributed systems.
+  tags: [distributed-systems, databases]
+  added: 2026-07-15
+
+- id: the-bitter-lesson
+  title: "The Bitter Lesson"
+  url: http://www.incompleteideas.net/IncIdeas/BitterLesson.html
+  type: article
+  note: >-
+    Rich Sutton's short, oft-cited essay arguing that general methods leveraging
+    computation beat hand-crafted domain knowledge in the long run.
+  tags: [ml, essays]
+
+- id: julia-evans-blog
+  title: Julia Evans — blog & zines
+  url: https://jvns.ca
+  type: article
+  note: >-
+    Clear, friendly deep dives into systems topics — networking, debugging,
+    databases — often distilled into illustrated zines.
+  tags: [systems, debugging]
+
+- id: lobsters
+  title: Lobsters
+  url: https://lobste.rs
+  type: forum
+  note: >-
+    A smaller, tag-driven link-aggregation community focused on computing.
+    Higher signal-to-noise than most for technical discussion.
+  tags: [community]
+
+- id: compiler-explorer
+  title: Compiler Explorer (Godbolt)
+  url: https://godbolt.org
+  type: tool
+  note: >-
+    See the assembly your C/C++/Rust/etc. compiles to, live, across compilers
+    and flags. Indispensable for understanding what the optimizer does.
+  tags: [compilers, performance]
+
+- id: regex101
+  title: regex101
+  url: https://regex101.com
+  type: tool
+  note: >-
+    Build and debug regular expressions with a live match explanation and a
+    reference sidebar. Supports multiple regex flavors.
+  tags: [regex]
+
+- id: papers-with-code
+  title: Papers with Code
+  url: https://paperswithcode.com
+  type: other
+  note: >-
+    Machine-learning papers linked to their implementations and benchmark
+    leaderboards. Good for going from a result to runnable code.
+  tags: [ml, reading-list]
+
+- id: refactoring-guru
+  title: Refactoring.Guru — Design Patterns
+  url: https://refactoring.guru/design-patterns
+  type: other
+  note: >-
+    Illustrated catalog of design patterns and refactorings, with examples in
+    several languages. A handy reference when a class hierarchy gets messy.
+  tags: [patterns, reference]

@@ -14,8 +14,8 @@
   if (canvas && ctx) {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const LINK_DIST = 130; // px: draw a line between two particles this close
-    const MOUSE_DIST = 175; // px: pointer influence radius
+    const LINK_DIST = 200; // px: draw a line between two particles this close
+    const MOUSE_DIST = 200; // px: pointer influence radius
 
     let width = 0;
     let height = 0;
@@ -52,7 +52,7 @@
       canvas!.width = Math.floor(width * dpr);
       canvas!.height = Math.floor(height * dpr);
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.min(110, Math.max(28, Math.floor((width * height) / 14000)));
+      const count = Math.min(110, Math.max(28, Math.floor((width * height) / 6000)));
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
