@@ -4,19 +4,31 @@ interface Props {
   title: string;
   description: string;
   tags?: string[];
+  banner?: string;
 }
 
-const { href, title, description, tags = [] } = Astro.props;
+const { href, title, description, tags = [], banner } = Astro.props;
 ---
 
 <article class="project-card">
-  <h3><a href={href}>{title}</a></h3>
-  <p>{description}</p>
   {
-    tags.length > 0 && (
-      <ul class="tags">
-        {tags.map((tag) => <li class="tag">{tag}</li>)}
-      </ul>
+    banner ? (
+      <img class="card-banner" src={banner} alt="" loading="lazy" />
+    ) : (
+      <div class="card-banner card-banner--empty" aria-hidden="true" />
     )
   }
+  <div class="card-body">
+    {/* The heading link's ::after (in global.css) stretches over the whole
+        card, so a click anywhere navigates while keeping one accessible link. */}
+    <h3><a class="card-title-link" href={href}>{title}</a></h3>
+    <p>{description}</p>
+    {
+      tags.length > 0 && (
+        <ul class="tags">
+          {tags.map((tag) => <li class="tag">{tag}</li>)}
+        </ul>
+      )
+    }
+  </div>
 </article>

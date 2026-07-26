@@ -9,7 +9,7 @@ interface Props {
 const { title, description = 'Personal website and project showcase.' } = Astro.props;
 
 // Site name shown in the header/footer. Change this to your name.
-const siteName = 'Your Name';
+const siteName = 'Pi-Juice';
 
 // Build a canonical URL only when `site` is configured in astro.config.mjs.
 const canonical = Astro.site
@@ -42,8 +42,7 @@ const year = new Date().getFullYear();
       <div class="container">
         <a class="brand" href="/">{siteName}</a>
         <nav class="site-nav">
-          <a href="/">Home</a>
-          <a href="/projects/">Projects</a>
+          <a href="/projects/">Archive</a>
         </nav>
       </div>
     </header>

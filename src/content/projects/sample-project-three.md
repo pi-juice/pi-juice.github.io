@@ -3,6 +3,7 @@ title: "Sample Project Three"
 description: "An older project kept in the archive — not featured on the home page."
 date: 2025-11-02
 tags: ["design"]
+banner: "/banners/sample-project-three.svg"
 featured: false
 ---
 

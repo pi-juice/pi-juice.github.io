@@ -3,6 +3,7 @@ title: "Sample Project Two"
 description: "A short one-line summary of what this project is and why it matters."
 date: 2026-05-10
 tags: ["python", "data"]
+banner: "/banners/sample-project-two.svg"
 featured: true
 liveUrl: "https://example.com"
 ---

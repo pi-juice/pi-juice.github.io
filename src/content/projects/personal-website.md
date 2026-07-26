@@ -3,6 +3,7 @@ title: "This Website"
 description: "A fast, static personal site built with Astro and deployed on GitHub Pages."
 date: 2026-07-22
 tags: ["astro", "web", "static-site"]
+banner: "/banners/personal-website.svg"
 featured: true
 repoUrl: "https://github.com/pi-juice/pi-juice.github.io"
 ---

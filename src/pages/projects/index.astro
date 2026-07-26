@@ -8,9 +8,9 @@ const projects = (await getCollection('projects'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<BaseLayout title="Projects — Your Name" description="Things I've built.">
-  <h1>Projects</h1>
-  <p class="lead">Everything I've shipped and written up.</p>
+<BaseLayout title="Archive-juice" description="Things I've built.">
+  <h1>Archive</h1>
+  <p class="lead">Projects, articles, etc.</p>
 
   <div class="project-grid">
     {
@@ -20,6 +20,7 @@ const projects = (await getCollection('projects'))
           title={p.data.title}
           description={p.data.description}
           tags={p.data.tags}
+          banner={p.data.banner}
         />
       ))
     }
