@@ -8,9 +8,6 @@ banner: "/banners/eboard_banner.jpg"
 featured: true
 ---
 
-# Do-It-Yourself The Hard Way
-
-
 An idea started invading my mind after finishing my BSc. I saw people making amazing electric longboards, some flying at speeds over 70 km/h. I wanted one. I was going to make one.
 
 ---
