@@ -14,11 +14,11 @@ Once I started looking into NAS options, my appetite for features quickly grew. 
 
 ---
 
-## The DIY Route Prevails
+## Case build
 
-Luckily, there were plenty of others before me that had the same thought pattern. Enter the mini PC, usually a common sight in office biomes, pretty decent ones can be had for a hundred or so euro. 
+Luckily, there were plenty of others before me that had the same thought pattern. Enter the mini PC, usually a common sight in office biomes, pretty decent ones can be had for a couple hundred or so euro. 
 
-I found some very nice examples on 3d print file repositories, but I cannot help myself, I had to design my own. I wanted a compact machine, one that would make a more efficient use of volume. What can I say, I like small computers.
+I found some very nice examples on 3d print file repositories, but I couldn't help myself, I had to design my own. I wanted a compact machine, one that would make a more efficient use of volume. What can I say, I like small computers.
 
 
 ![Fully built server](nas1.jpg)
@@ -27,11 +27,11 @@ I found some very nice examples on 3d print file repositories, but I cannot help
 
 ## Hardware Overview
 
-Below is a list of all the stuff crammed into this case
+Below is a list of all the stuff crammed into this case.
 
 | | |
 |---|---|
-| PC | Lenovo ThinkStation i3 8th gen |
+| PC | Lenovo ThinkCentre i3 8th gen |
 | RAM | 24 Gb DDR3 |
 | Storage | WD Ultrastar HC550 16TB x4 and a 500GB SSD for the OS|
 | Network | 2.5G switch, USB to 2.5G dongle and a WiFi router|
@@ -41,7 +41,7 @@ Below is a list of all the stuff crammed into this case
 
 ![NAS Displaying it's privates](nas2.jpg)
 
-I also printed the caddies to act as flexures in order to decouple the HDD's fro mthe frame somewhat. Perhaps I will get around to test if this actually does anything.
+I also printed the caddies to act as flexures in order to somewhat decouple the HDD's from the frame. The SATA connectors inside the case are also mounted in compliant holders. I should test if this actually does anything.
 
 ![HDD caddy](caddy.jpg)
 
