@@ -13,7 +13,7 @@ I started working on an ebike when I took up an internship which was located abo
 
 ## V1
 
-The goal: reaching 50km/h on nominal battery voltage of 36V. The motor will run at 6.5k RMP at that voltage and I designed the reduction ratios around these numbers. I have seen people use very long belts, or friction drives for such types of ebike, but as usual, I had to do it my own way. A double reduction stage is the only acceptable answer for small outrunner BLDC's. I found some inspiration on Endless Sphere. There were excellent examples of double reduced mid-drives, but extra load on the main chain was not appealing. I went for direct rear wheel drive, mounted instead of the rear caliper.
+The goal: reaching 50km/h on nominal battery voltage of 36V. The motor will run at 6.5k RMP at that voltage and I designed the reduction ratios around these numbers. I have seen people use very long belts, or friction drives for such types of ebike, but as usual, I had to do it my own way. I found some inspiration on Endless Sphere. There were excellent examples of double reduced mid-drives, but extra load on the main chain was not appealing. I went for direct rear wheel drive, mounted instead of the rear caliper.
 
 ![The first measurements](ebike_proto.jpg)
 
@@ -21,7 +21,7 @@ I did not have proper datasheets for the motor I had, but I saw some rough measu
 
 ![Kit after a 600km inspection](ebike_kit.jpg)
 
-V1 ran for well over 600km, as I used it like a booster - I almost never stopped pedaling. I melted the pinion in about 10km when I tried to run full throttle only. Some design oversights - the gearbox was not rigid enough, and as a result the belt would constantly rub on and sometimes jump off of the pulley. I did not enjoy the experience of buying a replacement belt after the sides frayed.
+V1 ran for well over 600km, as I used it like a booster - I almost never stopped pedaling. I melted the pinion in about 10km when I tried to run full throttle only. Some design oversights - the gearbox was not rigid enough, and as a result the belt would constantly rub on and sometimes jump off of the pulley.
 
 ![V1 completed](gazelle_v1.jpg)
 
@@ -29,7 +29,7 @@ V1 ran for well over 600km, as I used it like a booster - I almost never stopped
 
 ## V2
 
-Main upgrades were: a chain drive, a compliant chain tensioner, rigidified gearbox, a 3D printed battery mount instead of some IKEA furniture remnants.
+Main changes were: a chain drive, a compliant chain tensioner, rigidified gearbox, a 3D printed battery mount instead of some IKEA furniture remnants.
 
 ![V2 kit parts](v2_proto.jpg)
 
