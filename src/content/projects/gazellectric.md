@@ -9,6 +9,7 @@ featured: true
 
 I started working on an ebike when I took up an internship which was located about 15km away. A battery, motor, belts, pulleys and ESC were left over from the earlier longboard project. I had a reliable well calibrated Ender3. I had some skateboard bearings and drive shafts from a donor laser printer. On top of that, enough motivation to beat the 40 minute bike ride. The stars had aligned.
 
+---
 
 ## V1
 
@@ -24,12 +25,16 @@ V1 ran for well over 600km, as I used it like a booster - I almost never stopped
 
 ![V1 completed](gazelle_v1.jpg)
 
+---
+
 ## V2
 
 Main upgrades were: a chain drive, a compliant chain tensioner, rigidified gearbox, a 3D printed battery mount instead of some IKEA furniture remnants.
 
 ![V2 kit parts](v2_proto.jpg)
 
-Unfortunately, as often happens with my projects, it remains unfinished. The ultimate version would have 2 motors, a display, a new water-proof battery case, a properly designed gearbox output shaft and I dream of replacing the chain drive with another printed gear. It remains a daily driver in the current state with the occasional gear replacement.
+It is still not at a point where I can call it completed. The ultimate version would have 2 motors, a display, a new battery case with improved water ingress protection, a properly designed gearbox output shaft. And I dream of replacing the chain drive with another printed gear. It remains a daily driver in the current state with the occasional gear replacement.
 
 ![V2 coplete](ebike_v2.jpg)
+
+---

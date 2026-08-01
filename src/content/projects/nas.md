@@ -4,13 +4,15 @@ description: "I wanted a NAS, but with extras."
 date: 2026-01-10
 tags: ["Proxmox", "3d printing", "Lenovo"]
 banner: "/banners/juicednas_banner.jpg"
-featured: true
+featured: false
 
 ---
 
 I started thinking about data management. I must be getting old. All this time, my "back-up" solution was to keep the stuff on an external HDD, probably like 90% of regular folks. That is sacrilege for anyone who frequents r/datahoarder.
 
 Once I started looking into NAS options, my appetite for features quickly grew. Unfortunately the prices were atrocious for what was being offered. Sure, you get ease of use, but also a weak computer for the money spent that will never be more than it's creators allow it to be. That does not sit well with me.
+
+---
 
 ## The DIY Route Prevails
 
@@ -21,7 +23,7 @@ I found some very nice examples on 3d print file repositories, but I cannot help
 
 ![Fully built server](nas1.jpg)
 
-
+---
 
 ## Hardware Overview
 
@@ -38,6 +40,10 @@ Below is a list of all the stuff crammed into this case
 | Cooling | Arduino Nano controlling a 140mm fan via NTC thermistor readings |
 
 ![NAS Displaying it's privates](nas2.jpg)
+
+I also printed the caddies to act as flexures in order to decouple the HDD's fro mthe frame somewhat. Perhaps I will get around to test if this actually does anything.
+
+![HDD caddy](caddy.jpg)
 
 
 ---
